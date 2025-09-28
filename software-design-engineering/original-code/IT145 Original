@@ -1,0 +1,363 @@
+1)	Driver.java class 
+Package RescueAnimals.Src;
+Import java.sql.Array; Import java.until.ArrayList; Import java.util.Scanner;
+
+@Suppress Warnings(“unused”) Public class Driver {
+Private static ArrayList<Dog> dogList = new ArrayList<Dog>();
+Private static ArrayList<Monkey> monkeyList = new ArrayList<Monkey>(); Private static ArrayList<String> monkeySpecies = new ArrayList<String>();
+//Variables
+ Object listDogs = new Object();
+
+Public static void main(String[] args) {
+
+
+initializeDogList(); InitializeMonkeyList(); initializeMonkeySpecies();
+
+Scanner scnr = new Scanner(System.in) displayMenu();
+String userIn = scnr.nextLine();
+ 
+While (!userIn.equalsIgnoreCase(“Q”)) { If (userIn.equals(“1”)) {
+intakeNewDog(scnr); userIn = scnr.nextLine():
+}
+If (userIn.equals(“2”)) {
+intakeNewMonkey(scnr); userIn = scnr.nextLine();
+}
+if (userIn.equals(“3”)) {
+reserveAnimal(scnr); userIn = scnr.nextLine();
+}
+if (userIn.equals(“4”)) { printAnimals(“dog”); userIn = scnr.nextLine();
+}
+if (userIn.equals(“5”)) {
+printAnimals(“monkey”); userIn = scnr.nextLine();
+}
+if (userIn.equals(“6”))
+printAnimals(“available”); userIn = scnr.nextLine();
+}
+
+ 
+else {
+ 
+
+Systen.out.println(“Invalid input”) displayMenu();
+userIn = scnr.nextLine();
+ 
+}
+
+}
+
+
+If (userIn.equalsIgnoreCase(“q”)) { System.out.printzln(“Exiting program”); Scnr.close.();
+System.exit(0);
+}
+}
+//Displays menu options
+ Public static void displayMenu() {
+System.out.println(“\n\n”); System.out.println(“\t\t\t\tRescue Animal System Menu”); System.out.println(“[1] Intake a new dog”) System.out.println(“[2] Intake a new monkey”); System.out.println(“[3] Reserve an animal”); System.out.println(“[4] Print a list of all dogs”); System.out.println(“[5] Print a list of all monkeys”);
+System.out.println(“[6] Print a list of all animals that are not reserved”); System.out.println();
+System.out.println(“Enter a menu selection\n”);
+}
+
+
+//Test list that adds dogs
+ Public static void initializeDogList() {
+Dog dog1 = new Dog(“Spot”, “German Shepherd”, “male”, “1”, “25.6”, “05-12-2019”, “United States”, “intake”, false, “United States”);
+Dog dog2 = new Dog(“Rex”, “Great Dane”, “male”, “3”, “35.2”, “02-03-2020”, “United States”, “Phase I”, false, “United States”);
+ 
+Dog dog3 = new Dog(“Bella”, “Chihuahua”, “female”, “4”, “25.6”, “12-12-2019”, “Canada”, “in service”, true, “Canada”);
+dogList.add(dog1); dogList.add(dog2); dogList.add(dog3);
+}
+
+
+//Test list that adds monkeys
+Public static void initializeMonkeySpecies() { String species1 = new String(“capuchin”); String species2 = new String(“guenon”); String species3 = new String(“macaque”); String species4 = new String(“marmoset”);
+String species5 = new String(“squirrel monkey”); String species6 = new String(“tamarin”); monkeySpecies.add(species1); monkeySpecies.add(species2); monkeySpecies.add(species3); monkeySpecies.add(species4); monkeySpecies.add(species5); monkeySpecies.add(species6);
+}
+
+
+Public static void intakeNewDog(Scanner scanner) { System.out.println(“What is the dog’s name?’); String name = scanner.nextLine();
+ 
+For(Dog dog: dogList) { If(dog.getName().equalsIgnoreCase(name)) {
+System.out.println(“\n\nThis dog is in our system\n\n”); Return;//returns to menu
+}
+else {
+try {
+dog.setNames(name); System.out.println(“What is the dog’s breed?”); Dog.setBreed(scanner.nextLine());
+
+System.out.println(“What is the dog’s age?”); dog.setGender(scanner.nextLine()); System.out.println(“What is the dog’s weight”); dog.setWeight(scanner.nextLine()); System.out.println(“When was the dog aquisitioned?”); dog.setAcquisitionData(scanner.nextLine()); System.out.println(“Where was the dog aquisitioned?”); Dog.setAcquisitionLocation(scanner.nextLine()); System.out.println(“”What is the dog’s training status?”); dog.setTrainingStatus(scanner.nextLine()); System.out.println(“Is the dog reserved?”); dog.setReserved(scanner.nextBoolean());
+if (dog.getReserved() == true) {
+System.out.println(“What country is the dog in service?”); dog.setInServiceCountry(scanner.nextLine());
+}
+System.out.println(“\n\nDog created\n\n”);
+ 
+display Menu(): return;
+}
+catch (Exception excpt) {
+System.out.println(excpt.getMessage()); displayMenu();
+return;
+}
+
+}
+
+}
+
+}
+
+
+Public static void intakeNewMonkey(Scanner scanner) {
+System.out.println(“	What is the monkey’s name?”); String name = scanner.nextLine();
+for(Monkey monkey: monkeyList) {
+
+
+if(monkey.getName().equalsIgnoreCase(name)) { System.out.println(“\n\n This monkey is already in our system\n\n”); return; //returns to menu
+}
+else {
+try {
+monkey.setName(name);
+System.out.println(“What is the monkey’s species?”);
+ 
+String species = scanner.nextLine().toLowerCase(); If (!monkeySpecies.contains(species)) {
+throw new Exception(“Invalid species”);
+
+
+}
+else {
+monkey.setSpecies(species);
+}
+System.out.println(“What is the monkey’s gender?”); monkey.setGender(scanner.nextLine()); System.out.println(“What is the monkey’s age?”); monkey.setAge(scanner.nextLine()); System.out.printlnz(“(“What is the monkey’s weight?”); Monkey.setWeight(scanner.nextLine()); System.out.println(“What is the monkey’s tail length?”); monkey.setTailLength(scanner.nextLine()); System.out.println(“What is the monkey’s height?”); monkey.setHeight(scanner.nextLine()); System.out.println(“What is the monkey’s body length?”); monkey.setBodyLength(scanner.nextLine()); System.out.println(“When was the monkey acquisitioned?”); monkey.setAcquisitionLocation(scanner.nextLine()); System.out.println(“Where was the monkey acquisitioned?”); Monkey.setAcquisitionLocation(scanner.nextLine()); System.out.println(“What is the monkey’s training status?”); Monkey.setTrainingStatus(scanner.nextLine()); System.out.println(“Is the monkey reserved?”); Monkey.setRreserved(scanner.nextBoolean());
+If (monkey.getReserved() == true) {
+ 
+System.out.println(“What country is the monkey in
+service?”);
+
+Monkey.setInServiceCountry(scanner.nextLine());
+
+}
+System.out.println(“\n\nMonkey created\n\n”); displayMenu();
+
+
+}
+Catch (Exception excpt) {
+System.out.println(excpt.getMessage()); System.out.println(“Please try again.”); displayMenu();
+return;
+}
+
+}
+
+}
+
+}
+
+Public static void reserveAnimal(Scanner) {
+System.out.println(“Select species.”); String species = scanner.nextLine();
+if(dog.getName().equalsIgnoreCase(name)) { System.out.println(“Set dog reserved true or false?”); Dog.setReserved(scanner.nextBoolean());
+return;
+}
+else {
+System.out.println(“Dog does not exist.”);
+ 
+return;
+
+}
+}
+
+}
+else if (species.equalsIgnoreCase(“monkey”)) { for (Monkey monkey: monkeyList) {
+System.out.println(“Enter name of monkey.”); String name = scanner.nextLine();
+
+If(monkey.getName().equalsIgnoreCase(name)) {
+
+System.out.println(“Set monkey reserved true or
+false?”);
+
+monkey.setReserved(scanner.nextBoolean());
+
+}
+else {
+System.out.println(“Monkey does not exist.”); return;
+}
+
+}
+}
+
+}
+
+
+Public static void printlnAnimals( String choice) { If (choice.equalsIgnoreCase(“dog”)) {
+For (Dog dog: dogList) {
+System.out.println(dog.getName());
+}
+}
+ 
+//Retrieves animals from the list and verifies they are not reserved
+
+their name and species/breed.
+if (choice.equalsIgnoreCase(“available”)) { for(Dog dog: dogList) {
+if (dog.getReserved() == false) {
+
+System.out.println(dog.getName() + “, “ +
+dog.getBreed());
+
+}
+
+}
+for (Monkey monkey: monkeyList) {
+if (monkey.getReserved() == false) { System.out.println(monkey.getName() + “, “ +
+Monkey.getSpecies());
+}
+}
+System.out.println(“Press any key to continue. “);
+}
+}
+
+
+
+
+}
+
+
+
+
+2)	Dog.java class file Package 
+	RescueAnimals.src;
+Public class Dog extends RescueAnimals {
+//Instance variable Private Strong breed;
+ 
+
+
+//Constructor
+Public Dog(String name, String breed, String gender, String age, String weight, String acquisitionDate, String acqisitionCountry) {
+String trainingStatus, Boolean reserved, String inServiceCountry) { setName(name):
+setBreed(breed); setGender(gender); setAge(age); setWeight(weight);
+setAcquisitionDate(acquisitionDate); setAcquisitionLocation(acquisitionCountry); setTrainingStatus(trainingStatus); setReserved(reserved); setInServiceCountry(inServiceCountry);
+
+}
+
+
+//Accessor Method Public String getBreed() {
+Return breed;
+}
+//Mutator Method
+Public void setBreed(String dogBreed) { Breed = dogBreed;
+}
+
+}
+ 
+3)	RescueAnimal.java package RescueAnimals.src; import java.lang.String; public class RescueAnimal {
+//Instance variables private String name; private String animalType; private String gender; private String age;
+private String weight;
+private String acquisitionDate; private String acquisitionCountry;
+private String trainingStatus; private Boolean reserved;
+private String inServiceCountry;
+
+
+//Constructor
+public RescueAnimal() {
+}
+public void getName(String name) { return.name;
+}
+public void setName(String name) { This.name = name;
+}
+
+
+public String getAnimalType() { Return animalType;
+}
+ 
+public String getGender() { Return gender;
+}
+public void setGender(String gender) { This.gender = gender;
+}
+public String getAge() {
+Return age;
+}
+public void setAge(String age) { This.age = age;
+}
+public String getWeight() {
+Return weight;
+}
+public void setWeight(String weight) { This.weight = weight;
+}
+public String getAcquisitionDate(String acquisitionDate) { Return acquisitionCountry;
+}
+
+
+public void setAcquisitionLocation(String acquisitionCountry) { this.acquisitionCountry = acquisitionCountry;
+}
+
+
+Public Boolean getReserved() { Return reserved;
+}
+ 
+
+
+Public void setReserved(Boolean reserved) { This.reserved = reserved;
+}
+
+
+Public String getServiceLocation() { Return inServiceCountry;
+}
+Public void setInServiceCountry(String inServiceCountry) { This.inServiceCountry = inServiceCountry;
+}
+
+
+Public String getTriningStatus() { return trainingStatus;
+}
+
+
+Public void setTrainingStatus(String trainingStatus) { This.trainingStatus = trainingStatus;
+}
+
+}
+
+
+
+
+4)	Monkey.java class Package RescueAnimals.src;
+Public class Monkey extends RescueAnimal {
+//Instance variable Private String tailLength; Private String height;
+Private String bodyLength:
+ 
+Private String species;
+//Available monkey species
+String[] monkeySpecies = {“Capuchin”, “Guenon”, “Macaque”, “Marmoset”, “Squirrel Monkey”, “Tamarin”};
+//Constructor
+Public Monkey(String name, String gender, String age,
+String weight, String acquisitionDate, String acquisitionCountry, String trainingStatus, Boolean reserved, String inServiceCountry, String tailLength, String height, String bodyLength;
+Private String species;
+
+
+//Available monkey species
+String[] monkeySpecies = {“Capuchin”, “Guenon”, “Macaque”, “Marmoset”, “Squirrel Monkey”, “Tamarin”};
+//Constructor
+Public Monkey(String name, String gender, String age,
+String weight, String acquisitionDate, String acquistionCountry, String trainingStatus, Boolean reserved, String inServiceCountry, String tailLength, String height, String bodyLength, String species) {
+setName(name); setGender(gender); setAge(age); setWeight(weight);
+setAcquisitionDate(acquisitionDate); setAcquisitionLocation(acquisitionCountry); setTrainingStatus(trainingStatus); setReserved(reserved); setInServiceCountry(inServiceCountry); setTailLength(tailLength).
+ 
+setHeight(height); setBodyLength(bodyLength); setSpecies(species);
+}
+//Accessor methods
+Public String getTailLength() { return tailLength;
+}
+Public String getHeight() {
+return height;
+}
+Public String getBodyLength() { Return bodyLength;
+}
+Public String getSpecies() {
+}
+Public void setHeight(String monkeyTailLength) { tailLength = monkeyTailLength;
+}
+Public void setHeight(String monkeyHeight) { tailLength = monkeyTailLength;
+}
+Public void setBodyLength(String monkeyHeight) { tailLength = monkeyHeight;
+}
+Public void setSpecies(String monkeySpecies) { bodyLength = monkeyBodyLength;
+}
+public void setSpecies(String monkeySpecies) {
+ 
+species = monkeySpecies);
+
+}
+
+}
+
