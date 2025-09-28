@@ -8,6 +8,8 @@ Explore my work in software design, engineering, and digital forensics below.
 ## 🔗 Navigation
 - [Home](./)
 - [Software Design and Engineering](./software-design-engineering/)
+- [Algorithms and Data Structures](./algorithms-and-data-structures/)
+- [Databases](./databases/)
 - [About](./about/)
 - [Contact](./contact/)
 
