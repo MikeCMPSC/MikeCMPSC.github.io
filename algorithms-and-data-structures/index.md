@@ -5,10 +5,23 @@ title: Algorithms and Data Structures
 
 # Algorithms and Data Structures
 
-Welcome to my Algorithms and Data Structures section.  
-This artifact highlights my ability to analyze computational problems, design efficient solutions, and apply algorithmic thinking to software development.
+This section highlights my ability to analyze algorithms, optimize data storage, and implement efficient solutions in software.
 
-**Contents:**
-- [Original Code](./original-code/)
-- [Enhanced Code](./enhanced-code/)
-- [Journal Entry](./journal.md)
+---
+
+## 🧩 Original Code
+🔗 [View Original Code on GitHub](https://github.com/MikeCMPSC/MikeCMPSC.github.io/tree/main/algorithms-and-data-structures/original-code)
+
+---
+
+## 🚀 Enhanced Code
+🔗 [View Enhanced Code on GitHub](https://github.com/MikeCMPSC/MikeCMPSC.github.io/tree/main/algorithms-and-data-structures/enhanced-code)
+
+---
+
+## 🧠 Journal Entry
+✳️ [Read My Journal Reflection](./journal.md)
+
+---
+
+[Back to Home](../)
