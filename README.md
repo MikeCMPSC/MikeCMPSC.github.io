@@ -10,8 +10,8 @@ Explore my work in software design, engineering, and digital forensics below.
 - [Software Design and Engineering](./software-design-engineering/)
 - [Algorithms and Data Structures](./algorithms-and-data-structures/)
 - [Databases](./databases/)
-- [About](./about/)
-- [Contact](./contact/)
+- [About](./about)
+- [Contact](./contact)
 
 ---
 
