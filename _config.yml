@@ -31,3 +31,4 @@ include:
   - "*.css"
   - "*.js"
   - "*.sql"
+  - "*.class"
