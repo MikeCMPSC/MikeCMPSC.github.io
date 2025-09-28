@@ -5,10 +5,23 @@ title: Databases
 
 # Databases
 
-This section highlights my experience designing, implementing, and managing databases.  
-It includes work that demonstrates my understanding of data modeling, normalization, and efficient data retrieval using SQL and NoSQL systems.
+This section presents my database work, including schema design, data normalization, and optimization for performance and security.
 
-**Contents:**
-- [Original Code](./original-code/)
-- [Enhanced Code](./enhanced-code/)
-- [Journal Entry](./journal.md)
+---
+
+## 🧩 Original Code
+🔗 [View Original Code on GitHub](https://github.com/MikeCMPSC/MikeCMPSC.github.io/tree/main/databases/original-code)
+
+---
+
+## 🚀 Enhanced Code
+🔗 [View Enhanced Code on GitHub](https://github.com/MikeCMPSC/MikeCMPSC.github.io/tree/main/databases/enhanced-code)
+
+---
+
+## 🧠 Journal Entry
+✳️ [Read My Journal Reflection](./journal.md)
+
+---
+
+[Back to Home](../)
