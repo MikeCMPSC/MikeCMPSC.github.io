@@ -22,7 +22,7 @@ I have experience in both leadership and technology. My career journey has given
 
 ## Career Goal
 
-My goal is to combine my technical and analytical skills to pursue a career in digital forensics** and cybersecurity, where I can help organizations protect data and investigate cyber incidents.
+My goal is to combine my technical and analytical skills to pursue a career in digital forensics and cybersecurity, where I can help organizations protect data and investigate cyber incidents.
 
 ---
 
